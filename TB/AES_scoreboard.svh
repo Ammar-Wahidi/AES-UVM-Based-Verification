@@ -77,7 +77,8 @@ function void AES_scoreboard::write (AES_sequence_item t);
 
         // Open file "key.txt" for writing
 
-        fd = $fopen("D:/Quista/Questasim/examples/proj_aes/Python_code/key.txt","w");
+        fd = $fopen("../../Python_code/key.txt","w");
+
 
         // Writing to file : First line writing the data , Second line writing the key
 
@@ -89,11 +90,11 @@ function void AES_scoreboard::write (AES_sequence_item t);
 
         // "$system" task to run the python code and interact with SCOREBOARD through I/O files
 
-        $system($sformatf("python D:/Quista/Questasim/examples/proj_aes/Python_code/aes_enc.py"));
+        $system($sformatf("python  ../../Python_code/aes_enc.py"));
 
         // Open file "output.txt" for reading
 
-        fd = $fopen("D:/Quista/Questasim/examples/proj_aes/Python_code/output.txt","r");
+        fd = fd = $fopen("../../Python_code/output.txt","r");
 
         // Reading the output of python code through "output.txt" file
 
